@@ -1,0 +1,14 @@
+Colorized Debug
+===============
+
+Rails plugin to get a little debug method with colorized output in console using
+ANSI escape sequences.
+
+
+
+License
+=======
+
+Copyright (c) 2008 Jorge Santiago
+
+Released under the MIT license
