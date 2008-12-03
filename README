@@ -60,6 +60,13 @@ cdebug {
 --------------------------------------------------------------------------------
 
 
+Acknowledgement
+===============
+
+This post inspired me to make this plugin:
+http://kpumuk.info/ruby-on-rails/colorizing-console-ruby-script-output
+
+
 License
 =======
 
