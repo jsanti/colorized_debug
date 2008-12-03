@@ -60,7 +60,8 @@ colored markers. Useful for example to catch specific SQL calls in your logs:
 <code>
 @user = User.find(params[:user_id])
 cdebug {
-  @advert = Advert.find(params[:id], :conditions => { :user_id => @user.id }, :joins => "LEFT JOIN streets ON streets.id = adverts.street_id")
+  @advert = Advert.find(params[:id], :conditions => { :user_id => @user.id },
+                                     :joins => "LEFT JOIN streets ON streets.id = adverts.street_id")
 }
 </code>
 </pre>
