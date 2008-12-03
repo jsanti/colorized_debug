@@ -45,7 +45,10 @@ Then you'll see a colored output like this in your controller log with separator
 Processing UserController#index (for 127.0.0.1 at 2008-12-02 22:53:24) [GET]
   Session ID: 9129c43641670458eb1f77d40764f308
 --------------------------------------------------------------------------------
-#<User id: 1, login: "jnay", crypted_password: "covzxvzx09c8vx8v", password_salt: "covzxvzx09c8vx8v", persistence_token: nil, single_access_token: nil, perishable_token: nil, login_count: 12, account_id: 1, email: "jay@nay.com", enabled: true, firstname: "Jay", lastname: "Nay", created_at: "2008-12-03 03:58:39", updated_at: "2008-12-03 03:58:39">
+#<User id: 1, login: "jnay", crypted_password: "covzxvzx09c8vx8v", password_salt: "covzxvzx09c8vx8v",
+persistence_token: nil, single_access_token: nil, perishable_token: nil, login_count: 12,
+account_id: 1, email: "jay@nay.com", enabled: true, firstname: "Jay", lastname: "Nay",
+created_at: "2008-12-03 03:58:39", updated_at: "2008-12-03 03:58:39">
 --------------------------------------------------------------------------------
 Completed in 12ms (View: 0, DB: 2) | 200 OK [http://localhost:3000/users]
 </pre>
@@ -65,7 +68,8 @@ cdebug {
 <pre>
   User Load (0.191339)   SELECT * FROM `users` WHERE (`users`.`id` = 48) LIMIT 1
 --------------------------------------------------------------------------------
-  Advert Load (0.002308)   SELECT `adverts`.* FROM `adverts` LEFT JOIN streets ON streets.id = adverts.street_id
+  Advert Load (0.002308)   SELECT `adverts`.* FROM `adverts`
+  LEFT JOIN streets ON streets.id = adverts.street_id
   WHERE (adverts.user_id = 48) ORDER BY adverts.id DESC LIMIT 1, 25
 --------------------------------------------------------------------------------
 </pre>
