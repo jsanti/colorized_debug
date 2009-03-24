@@ -1,14 +1,14 @@
 class Object
   def cdebug(*attrs)
-    logger.info "--------------------------------------------------------------------------------".green
+    RAILS_DEFAULT_LOGGER.info "--------------------------------------------------------------------------------".green
 
     attrs.each do |attr|
-      logger.info attr.inspect.red
+      RAILS_DEFAULT_LOGGER.info attr.inspect.red
     end
 
     result = yield if block_given?
 
-    logger.info "--------------------------------------------------------------------------------".green
+    RAILS_DEFAULT_LOGGER.info "--------------------------------------------------------------------------------".green
 
     result
   end
